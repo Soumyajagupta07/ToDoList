@@ -1,34 +1,30 @@
-let b = document.getElementById('add_b');
-let task_input = document.getElementById('task_input');
-let p = document.getElementById('para');
+let add=document.getElementById('add_b');
+let r_all=document.getElementById('remove_all_b');
 
-b.addEventListener('click',() => {
-    let li = document.createElement('li');
-    li.innerHTML = task_input.value;
-    // let remove_task = document.createElement('button');
-    // remove_task.innerHTML = 'Remove';
-    // list.appendChild(remove_task);
-    // remove_task.style.marginLeft='20px'
-    p.appendChild(li)
-    task_input.value = null;
-    li.setAttribute('class' ,'list')
-    li.style.listStyle = 'disc inside';
-    let button_click = document.querySelectorAll('.list')
-    for(let i of button_click){
+add.addEventListener('click',()=>{
+    let show=document.getElementById('show')
+    let text=document.getElementById('task_input');
+    let list=document.createElement('li')
+    list.innerHTML=text.value;
+    // list.classList.add('toDo')
+    list.setAttribute('class','toDo')
+    show.appendChild(list)
+    text.value=null
+    let toDo=document.querySelectorAll('.toDo')
+    for(let i of toDo){
+        i.setAttribute('title','click to delete task')
+    }
+    for(let i of toDo){
         i.addEventListener('click',(e)=>{
-            if(e.target.classList.contains('list')){
+            if(e.target.classList.contains('toDo')){
                 i.remove(e)
-                // i.remove(li)
+                
             }
         })
-
     }
 })
 
-remove_b.addEventListener('click',()=>{
-    p.innerHTML = null;
+r_all.addEventListener('click',()=>{
+    let show=document.getElementById('show')
+    show.innerHTML=null
 })
-
-// remove_task.addEventListener('click',()=>{
-//     list.innerHTML = null;
-// })
