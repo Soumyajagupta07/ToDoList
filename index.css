@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(157, 87, 221);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+    
+}
+
+.head{
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+}
+.container{
+    background-color: rgb(54, 54, 54);
+    color: rgb(157, 87, 221);
+    height: 393px;
+    width: 700px;
+    border-radius: 20px;
+}
+
+.container div{
+    margin: 10px;
+    margin-left: 15px;
+}
+
+#task_input{
+    background-color:rgb(41,41,41);
+    color: rgb(157, 87, 221);
+    border: none;
+    border-radius: 15px;
+    height: 40px;
+    width: 400px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+#task_input::placeholder{
+    color: rgb(157, 87, 221);
+}
+
+.task_list{
+    margin-left: 20px;
+    margin-top: 30px;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+#show{
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 270px;
+}
+.toDo{
+    background-color: rgb(41,41,41);
+    border: none;
+    height: 34px;
+    width: 440px;
+    border-radius: 10px;
+    display: flex;
+    color: rgb(157, 87, 221);
+    margin-bottom: 20px;
+    align-items: center;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.toDo p{
+    margin-left: 10px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+#add_b ,#remove_all_b{
+    background-color: rgb(157, 87, 221);
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    margin-left: 15px;
+    border: none;
+    font-family: 'Space Grotesk', sans-serif;
+}

@@ -4,8 +4,13 @@ let r_all=document.getElementById('remove_all_b');
 add.addEventListener('click',()=>{
     let show=document.getElementById('show')
     let text=document.getElementById('task_input');
-    let list=document.createElement('li')
-    list.innerHTML=text.value;
+    let list=document.createElement('li');
+    let para = document.createElement('p');
+    para.innerHTML = text.value;
+    if(text.value == null)
+       alert("Please add some task")
+    list.appendChild(para);
+    
     // list.classList.add('toDo')
     list.setAttribute('class','toDo')
     show.appendChild(list)
